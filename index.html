@@ -29,14 +29,38 @@
 			<h2>My projects</h2>
 			<div id="list">
 				<div class="project">
-					<a class="img-link" href="https://reienn.github.io/CogTechProject/" target="_blank"><img src="assets/tom_game.png"></a>
-					<h3>Theory of mind training game for children with ASD</h3>
+					<div class="gallery">
+						<img src="assets/tom_game_01.png">
+						<img src="assets/tom_game_02.png">
+						<img src="assets/tom_game_03.png">
+						<img src="assets/tom_game_04.png">
+						<img src="assets/tom_game_05.png">
+						<button class="gallery-left" onclick="slider(this, -1)">&#10094;</button>
+						<button class="gallery-right" onclick="slider(this, 1)">&#10095;</button>
+					</div>					
+					<h3>Theory of Mind training game for children with ASD</h3>
+					<span class="tag">HTML5</span>
+					<span class="tag">CSS3</span>
+					<span class="tag">ES6</span>
+					<span class="tag">PhaserJS</span><br>
 					<a href="https://github.com/Reienn/CogTechProject" target="_blank">See on GitHub</a>
+					<a href="https://reienn.github.io/CogTechProject/" target="_blank">See demonstration</a>
 				</div>
 				<div class="project">
-					<a class="img-link" href="https://frozen-cliffs-72152.herokuapp.com/" target="_blank"><img src="assets/guessing_game.png"></a>
-					<h3>Real-time multiplayer picture guessing game</h3>
+					<div class="gallery">
+						<img src="assets/guessing_game_01.png">
+						<img src="assets/guessing_game_02.png">
+						<img src="assets/guessing_game_03.png">
+						<button class="gallery-left" onclick="slider(this, -1)">&#10094;</button>
+						<button class="gallery-right" onclick="slider(this, 1)">&#10095;</button>
+					</div>
+					<h3>Real-time multiplayer guessing game</h3>
+					<span class="tag">Angular 6</span>
+					<span class="tag">Node.js</span>
+					<span class="tag">Express</span>
+					<span class="tag">MongoDB</span><br>
 					<a href="https://github.com/Reienn/game-app" target="_blank">See on GitHub</a>
+					<a href="https://frozen-cliffs-72152.herokuapp.com" target="_blank">See demonstration</a>
 				</div>
 			</div>
 		</div>
@@ -68,6 +92,23 @@
 			window.onscroll = function() {
 				document.getElementById('nav-toggle').classList.add('hide-menu');
 			};
+
+			[].forEach.call(document.getElementsByClassName('gallery'), gallery => {
+				gallery.getElementsByTagName('img')[0].style.display = "block";
+				gallery.slideIndex = 0;
+			});
+
+			function slider(childButton, change){
+				let currentGallery = childButton.parentNode;
+				currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].style.display = "none";
+				currentGallery.slideIndex += change;
+				if(currentGallery.slideIndex === currentGallery.getElementsByTagName('img').length){
+					currentGallery.slideIndex = 0;
+				}else if(currentGallery.slideIndex < 0){
+					currentGallery.slideIndex = currentGallery.getElementsByTagName('img').length-1;
+				}
+				currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].style.display = "block";
+			}
 		</script>
 	</body>
 </html>
