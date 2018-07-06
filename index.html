@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anna - Portfolio</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+			<button id="menu-button" onclick="toggleNav()">&#9776;</button>
+		<nav>			
+			<ul id="nav-toggle" class="hide-menu">
+				<li><a onclick="myScroll('header', this)" class="nav-link active">home</a></li>
+				<li><a onclick="myScroll('about', this)" class="nav-link">about</a></li>
+				<li><a onclick="myScroll('projects', this)" class="nav-link">projects</a></li>
+				<li><a onclick="myScroll('contact', this)" class="nav-link">contact</a></li>
+			</ul>
+		</nav>
+		<header id="header">
+			<h1>I'm Anna</h1>
+			<h2>I'm a web developer</h2>
+		</header>
+		<div id="about">
+			<h2>About me</h2>
+			<p>I'm a full stack web developer.</p>
+			<img id="panda" src="assets/panda.svg">
+		</div>
+		<div id="projects">
+			<h2>My projects</h2>
+			<div id="list">
+				<div class="project">
+					<a class="img-link" href="https://reienn.github.io/CogTechProject/" target="_blank"><img src="assets/tom_game.png"></a>
+					<h3>Theory of mind training game for children with ASD</h3>
+					<a href="https://github.com/Reienn/CogTechProject" target="_blank">See on GitHub</a>
+				</div>
+				<div class="project">
+					<a class="img-link" href="https://frozen-cliffs-72152.herokuapp.com/" target="_blank"><img src="assets/guessing_game.png"></a>
+					<h3>Real-time multiplayer picture guessing game</h3>
+					<a href="https://github.com/Reienn/game-app" target="_blank">See on GitHub</a>
+				</div>
+			</div>
+		</div>
+		<footer id="contact">
+			<h2>Contact me</h2>
+			<form>
+				<input type="email" placeholder="Your e-mail" class="text-input"><br>
+				<input type="text" placeholder="Subject" class="text-input"><br>
+				<textarea placeholder="Message" rows="7" class="text-input"></textarea><br>
+				<input type="button" value="send" id="contact-button">
+			</form>
+		</footer>
+		<script>
+			function toggleNav(){
+				document.getElementById('nav-toggle').classList.toggle('hide-menu');
+			}
+			
+			function myScroll(anchor, navItem){
+				document.getElementById(anchor).scrollIntoView({ 
+					behavior: 'smooth' 
+				});
+				[].forEach.call(document.getElementsByClassName('nav-link'), navLink => {
+					navLink.classList.remove('active');
+				});
+				navItem.classList.add('active');
+				toggleNav();
+			}
+
+			window.onscroll = function() {
+				document.getElementById('nav-toggle').classList.add('hide-menu');
+			};
+		</script>
+	</body>
+</html>
