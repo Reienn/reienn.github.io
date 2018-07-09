@@ -17,7 +17,7 @@ function navScroll(anchor, navItem){
 	//Changing clicked menu link to active
 	navItem.classList.add('active');
 	toggleNav();
-	setTimeout(()=>{userScroll = false;}, 300);
+	setTimeout(()=>{userScroll = false;}, 1000);
 }
 
 //Activating navigation link after user scrolls 
@@ -41,7 +41,7 @@ window.onscroll = function() {
 				}
 			}
 
-		}, 200);
+		}, 100);
 	}
 };
 
