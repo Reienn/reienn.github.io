@@ -45,21 +45,37 @@ window.onscroll = function() {
 	}
 };
 
-//Projects screenshots slider - showing first image, setting index to 0
+//Projects screenshots slider - setting index to 0
 [].forEach.call(document.getElementsByClassName('gallery'), gallery => {
-	gallery.getElementsByTagName('img')[0].style.display = "block";
 	gallery.slideIndex = 0;
 });
 
-//Projects screenshots slider - navigating with previous/next buttons
-function slider(childButton, change){
-	let currentGallery = childButton.parentNode;
-	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].style.display = "none";
+//Projects screenshots slider
+function slider(currentGallery, change){
+	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.add('hidden');
+	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.add('display-none');
 	currentGallery.slideIndex += change;
 	if(currentGallery.slideIndex === currentGallery.getElementsByTagName('img').length){
 		currentGallery.slideIndex = 0;
 	}else if(currentGallery.slideIndex < 0){
 		currentGallery.slideIndex = currentGallery.getElementsByTagName('img').length-1;
 	}
-	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].style.display = "block";
+	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.remove('display-none');
+	setTimeout(()=>{
+		currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.remove('hidden');
+	}, 20);
+	
 }
+
+//Slider navigating with previous/next buttons
+function buttonSlider(childButton, change){
+	slider(childButton.parentNode, change);
+}
+
+//Auto slider
+window.setInterval(()=>{
+	let galleries = document.getElementsByClassName('gallery');
+	for(let i=0; i < galleries.length; i++){
+		slider(galleries[i], 1);
+	}
+}, 5000);
