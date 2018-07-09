@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Anna - Portfolio</title>
+		<title>Anna Web Dev Portfolio</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="style.css"/>
@@ -63,6 +63,23 @@
 					<a href="https://github.com/Reienn/guessing-game" target="_blank">See on GitHub</a>
 					<a href="https://frozen-cliffs-72152.herokuapp.com" target="_blank">See demonstration</a>
 				</div>
+				<div class="project">
+					<div class="gallery">
+						<img src="assets/conf_01.png">
+						<img src="assets/conf_02.png">
+						<img src="assets/conf_03.png">
+						<button class="gallery-left" onclick="slider(this, -1)">&#10094;</button>
+						<button class="gallery-right" onclick="slider(this, 1)">&#10095;</button>
+					</div>
+					<h3>Academic conference website</h3>
+					<span class="tag">HTML5</span>
+					<span class="tag">CSS3</span>
+					<span class="tag">Bootstrap</span>
+					<span class="tag">PHP</span>
+					<span class="tag">MySQL</span><br>
+					<a href="https://github.com/Reienn/acedemic-conference" target="_blank">See on GitHub</a>
+					<a href="http://xccc.000webhostapp.com/" target="_blank">See demonstration</a>
+				</div>
 			</div>
 		</section>
 		<footer id="contact" class="nav-anchor">
@@ -73,6 +90,7 @@
 				<textarea placeholder="Message" rows="7" class="text-input"></textarea><br>
 				<input type="button" value="send" id="contact-button">
 			</form>
+			<div id="copyrights">&copy;2018 ANNA JANKOWICZ</div>
 		</footer>
 		<script src="script.js"></script>
 	</body>
