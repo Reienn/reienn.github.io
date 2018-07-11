@@ -126,6 +126,41 @@ p{
 	border-radius: 50%;
 }
 
+#skills{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: 70vw;
+	max-width: 800px;
+}
+
+#about h3{
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.skill{
+	height: 100px;
+	width: 100px;
+	margin: 2vh 1vw;
+	background: #9CC862;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.skill:nth-child(even) {
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+}
+.skill:nth-child(odd) {
+	border-top-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
 #list{
 	display: flex;
 	flex-flow: row wrap;
