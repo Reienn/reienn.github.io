@@ -80,6 +80,7 @@ a:hover{
 }
 
 header{
+	background-color: #467A25;
 	background: url('assets/bg.svg');
 	background-repeat: none;
 	background-attachment: fixed;
@@ -255,7 +256,6 @@ input, textarea{
 	width: 100px;
 	padding: 10px;
 	border-radius: 5px;
-	margin-bottom: 50px;
 }
 
 #contact-button, #menu-button{
@@ -300,6 +300,15 @@ ul li{
 	padding: 3vh 1vw;
 	text-align: center;
 	color: rgb(165, 177, 159);
+}
+
+.social{
+	display: block;
+	margin: 50px 0;
+}
+
+.icon:hover, .icon:active{
+	transform: scale(1.1, 1.1);
 }
 
 @media screen and (max-width: 500px){

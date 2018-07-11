@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Anna Web Dev Portfolio</title>
+		<title>Anna Jankowicz Web Dev Portfolio</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="anna jankowicz web developer full-stack front-end back-end portfolio mean angular node mongodb">
 		<link rel="stylesheet" href="style.css"/>
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -99,12 +100,16 @@
 		</section>
 		<footer id="contact" class="nav-anchor">
 			<h2>Contact me</h2>
-			<form>
-				<input type="email" placeholder="Your e-mail" class="text-input"><br>
-				<input type="text" placeholder="Subject" class="text-input"><br>
-				<textarea placeholder="Message" rows="7" class="text-input"></textarea><br>
-				<input type="button" value="send" id="contact-button">
+			<script>let submitted = false;</script>
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf4mHod-sjGApVe97n0uEVKxmMW2qdskuJhWDlEWxKMRE9WEw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+				<input type="email" name="entry.2052967433" id="entry.2052967433" placeholder="Your e-mail" class="text-input" required><br>
+				<input type="text" name="entry.2063293427" id="entry.2063293427" placeholder="Subject" class="text-input" required><br>
+				<textarea name="entry.1763544238" id="entry.1763544238" placeholder="Message" rows="7" class="text-input" required></textarea><br>
+				<input type="submit" value="send" id="contact-button">
 			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+			<p id="msg"></p>
+			<a href="https://www.facebook.com/anna.m.jankowicz" target="_blank" class="social"><img class="icon" src="assets/FB-f-Logo__white_57.png" alt="facebook"></a>
 			<div id="up-link" class="display-none"><a onclick="navScroll('header', document.getElementById('header-link'))">&#94;</a></div>
 			<div id="copyrights">&copy;2018 ANNA JANKOWICZ</div>
 		</footer>
