@@ -8,7 +8,8 @@ let userScroll = false;
 function navScroll(anchor, navItem){
 	userScroll = true;
 	document.getElementById(anchor).scrollIntoView({ 
-		behavior: 'smooth' 
+		behavior: 'smooth',
+		block: 'start'
 	});
 	//Changing menu links to non-active
 	[].forEach.call(document.getElementsByClassName('nav-link'), navLink => {
@@ -42,6 +43,12 @@ window.onscroll = function() {
 			}
 
 		}, 100);
+	}
+	//Toggling up link
+	if(document.getElementById('header-link').classList.contains('active')){
+		document.getElementById('up-link').classList.add('display-none');
+	}else{
+		document.getElementById('up-link').classList.remove('display-none');
 	}
 };
 

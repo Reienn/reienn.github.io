@@ -245,6 +245,19 @@ ul li{
 	display: inline;
 }
 
+#up-link{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 200;
+	width: 60px;
+}
+#up-link a{
+	font-size: 300%;
+	font-weight: bold;
+	font-family: Verdana;
+}
+
 #copyrights{
 	position: absolute;
 	bottom: 0;
