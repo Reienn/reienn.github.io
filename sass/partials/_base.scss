@@ -1,0 +1,36 @@
+*{
+	font-family: $primary-fonts;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+}
+
+body{
+	width: 100vw;
+	min-width: 250px;
+	background-color: $light-bg-color;
+	color: $primary-font-color;
+	overflow-x: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;   
+}
+
+.display-none{
+	display: none;
+}
+
+.hidden{
+	opacity: 0;
+}
+
+.nav-anchor{
+	padding: 5vh 2vw;
+	height: 100%;
+	min-height: 80vh;	
+	width: 96vw;
+	text-align: center;
+	position: relative;
+}

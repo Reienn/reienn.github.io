@@ -1,0 +1,43 @@
+footer{
+    background-color: $dark-bg-color;
+    position: relative;
+
+    .social{
+        display: block;
+        margin: 50px 0;
+    }
+    
+    .icon:hover, .icon:active{
+        transform: scale(1.1, 1.1);
+    }
+    
+    #up-link{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 200;
+        width: 60px;
+
+        a{
+            font-size: 300%;
+            font-weight: bold;
+            font-family: Verdana;
+        }
+    }
+
+    #copyrights{
+        position: absolute;
+        bottom: 0;
+        width: 94vw;
+        padding: 3vh 1vw;
+        text-align: center;
+        color: $light-font-color;
+    }
+
+}
+
+
+
+
+
+

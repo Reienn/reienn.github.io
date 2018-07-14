@@ -1,0 +1,59 @@
+$primary-fonts: Helvetica, Verdana, sans-serif;
+$header-font: 'Ubuntu';
+
+%primary-h{
+	font-weight: 100;
+	font-family: $header-font;
+}
+
+h1{
+    @extend %primary-h;
+    margin: 100px 0 30px;
+	font-size: 600%;
+    font-weight: bold;
+    @media screen and (max-width: 500px){
+        font-size: 300%;
+    }
+}
+
+h2{
+    @extend %primary-h;
+    margin: 20px 0 20px;
+    font-size: 300%;
+    @media screen and (max-width: 500px){
+       font-size: 150%;
+    }
+}
+
+h3{
+    @extend %primary-h;
+    margin: 20px 5px 15px;
+    font-size: 115%;
+    @media screen and (max-width: 500px){
+        font-size: 110%;
+    }
+}
+
+#about h3{
+	font-size: 150%;
+	font-weight: bold;
+}
+
+p{
+	font-size: 120%;
+	margin: 2% 5%;
+}
+
+%primary-a{
+	display: inline-block;
+	padding: 20px 20px 0;
+	height: 30px;
+	color: $a-color;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+a:hover{
+	color: $a-hover-color;
+	cursor: pointer;
+}

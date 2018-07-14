@@ -1,0 +1,51 @@
+nav{
+	width: 100vw;
+	height: 50px;
+	text-align: right;
+	border-bottom: 1px solid $border-color;
+	position: fixed;
+	z-index: 100;
+	background-color: $nav-bg-color;
+
+	@media screen and (max-width: 500px){
+		height: auto;
+
+		.hide-menu{
+			display: none;
+		}
+	}
+
+	a{
+		@extend %primary-a;
+
+	}
+
+	.active{
+		color: $nav-active-font-color;
+		border-bottom: 2px solid $nav-active-border-color;
+	}
+
+	ul{
+		margin: 0 20px;
+
+		li{
+			display: inline;
+		}
+	}
+
+	@media screen and (max-width: 500px){
+		ul li, li a{
+			display: block;
+			text-align: center;
+		}
+	}
+}
+
+#logo{
+	height: 40px;
+	margin: 5px 3vw;;
+	border-radius: 50%;
+	position: fixed;
+	z-index: 200;
+	float: float;
+}

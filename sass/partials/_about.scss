@@ -1,0 +1,40 @@
+#about{
+    background-color: $dark-bg-color;
+
+    #avatar{
+        height: 30vh;
+        min-height: 100px;
+        border-radius: 50%;
+    }
+    
+    #skills{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: 70vw;
+        max-width: 800px;
+        
+        .skill{
+            height: 100px;
+            width: 100px;
+            margin: 2vh 1vw;
+            background: $skill-bg-color;
+            color: $button-font-color;
+            text-align: center;
+            line-height: 100px;
+            vertical-align: middle;
+            font-weight: bold;
+    
+            &:nth-child(even) {
+                border-top-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+            }
+            &:nth-child(odd) {
+                border-top-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+        }   
+    }
+}
+
