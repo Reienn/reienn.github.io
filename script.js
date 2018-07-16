@@ -1,3 +1,5 @@
+"use strict";
+
 //Toggling menu in mobile view
 function toggleNav(){
 	document.getElementById('nav-toggle').classList.toggle('hide-menu');
