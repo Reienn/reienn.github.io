@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 //Toggling menu in mobile view
 function toggleNav(){
@@ -52,53 +52,4 @@ window.onscroll = function() {
 	}else{
 		document.getElementById('up-link').classList.remove('display-none');
 	}
-};
-
-//Projects screenshots slider - setting index to 0
-[].forEach.call(document.getElementsByClassName('gallery'), gallery => {
-	gallery.slideIndex = 0;
-});
-
-//Projects screenshots slider
-function slider(currentGallery, change){
-	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.add('hidden');
-	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.add('display-none');
-	currentGallery.slideIndex += change;
-	if(currentGallery.slideIndex === currentGallery.getElementsByTagName('img').length){
-		currentGallery.slideIndex = 0;
-	}else if(currentGallery.slideIndex < 0){
-		currentGallery.slideIndex = currentGallery.getElementsByTagName('img').length-1;
-	}
-	currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.remove('display-none');
-	setTimeout(()=>{
-		currentGallery.getElementsByTagName('img')[currentGallery.slideIndex].classList.remove('hidden');
-	}, 20);
-	
-}
-
-//Slider navigating with previous/next buttons
-function buttonSlider(childButton, change){
-	slider(childButton.parentNode, change);
-}
-
-//Auto slider
-window.setInterval(()=>{
-	let galleries = document.getElementsByClassName('gallery');
-	for(let i=0; i < galleries.length; i++){
-		slider(galleries[i], 1);
-	}
-}, 5000);
-
-//Message after submitting form
-document.getElementById('gform').onsubmit = () => {
-	document.getElementById('msg').innerHTML = 'Thank you for your message';
-	document.getElementById('gform').style.display = 'none';
-	setTimeout(() => {
-		document.getElementById('msg').innerHTML = '';
-		[].forEach.call(document.getElementsByClassName('text-input'), input => {
-			input.value = '';
-		});
-		document.getElementById('gform').style.display = 'block';
-	}, 5000);
-
 };
