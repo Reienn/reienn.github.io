@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Anna Jankowicz Web Dev Portfolio</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="anna jankowicz web developer full-stack front-end back-end portfolio mean angular node mongodb">
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	</head>
+	<body>
+		<button id="menu-button" onclick="toggleNav()">&#9776;</button>
+		<a href="index.html"><img id="logo" src="assets/aj_logo.png"></a>
+		<nav id="nav-bar">
+			<ul id="nav-toggle" class="hide-menu">
+				<li><a onclick="navScroll('header', this)" id="header-link" class="nav-link active">home</a></li>
+				<li><a onclick="navScroll('about', this)" id="about-link" class="nav-link">about</a></li>
+				<li><a onclick="navScroll('projects', this)" id="projects-link" class="nav-link">projects</a></li>
+				<li><a onclick="navScroll('contact', this)" id="contact-link" class="nav-link">contact</a></li>
+			</ul>
+		</nav>
+		<header id="header" class="nav-anchor">
+			<h1>I'm Anna Jankowicz</h1>
+			<h2>a web developer</h2>
+		</header>
+		<section id="about" class="nav-anchor">
+			<h2>About me</h2>
+			<img id="avatar" src="assets/avatar.png">
+			<p>I'm a full-stack web developer.<br>I specialize in MEAN stack.</p>
+			<h3></p>Skills:</h3>
+			<div id="skills">
+				<div class="skill">HTML5</div>
+				<div class="skill">CSS3</div>
+				<div class="skill">Bootstrap</div>
+				<div class="skill">JavaScript</div>
+				<div class="skill">Angular</div>
+				<div class="skill">Node.js</div>
+				<div class="skill">Express</div>
+				<div class="skill">MongoDB</div>
+				<div class="skill">PHP</div>
+				<div class="skill">MySQL</div>
+			</div>			
+		</section>
+		<section id="projects" class="nav-anchor">
+			<h2>My projects</h2>
+			<div id="list">
+				<div class="project">
+					<div class="gallery">
+						<img src="assets/tom_game_01.png">
+						<img src="assets/tom_game_02.png" class="hidden display-none">
+						<img src="assets/tom_game_03.png" class="hidden display-none">
+						<img src="assets/tom_game_04.png" class="hidden display-none">
+						<img src="assets/tom_game_05.png" class="hidden display-none">
+						<button class="gallery-left" onclick="buttonSlider(this, -1)">&#10094;</button>
+						<button class="gallery-right" onclick="buttonSlider(this, 1)">&#10095;</button>
+					</div>					
+					<h3>Theory of Mind training game for children with ASD</h3>
+					<span class="tag">HTML5</span>
+					<span class="tag">CSS3</span>
+					<span class="tag">ES6</span>
+					<span class="tag">PhaserJS</span><br>
+					<a href="https://github.com/Reienn/tom-game" target="_blank">See on GitHub</a>
+					<a href="https://reienn.github.io/tom-game/" target="_blank">See demonstration</a>
+				</div>
+				<div class="project">
+					<div class="gallery">
+						<img src="assets/guessing_game_01.png">
+						<img src="assets/guessing_game_02.png" class="hidden display-none">
+						<img src="assets/guessing_game_03.png" class="hidden display-none">
+						<button class="gallery-left" onclick="buttonSlider(this, -1)">&#10094;</button>
+						<button class="gallery-right" onclick="buttonSlider(this, 1)">&#10095;</button>
+					</div>
+					<h3>Real-time multiplayer guessing game</h3>
+					<span class="tag">Angular 6</span>
+					<span class="tag">Node.js</span>
+					<span class="tag">Express</span>
+					<span class="tag">MongoDB</span><br>
+					<a href="https://github.com/Reienn/guessing-game" target="_blank">See on GitHub</a>
+					<a href="https://frozen-cliffs-72152.herokuapp.com" target="_blank">See demonstration</a>
+				</div>
+				<div class="project">
+					<div class="gallery">
+						<img src="assets/conf_01.png">
+						<img src="assets/conf_02.png" class="hidden display-none">
+						<img src="assets/conf_03.png" class="hidden display-none">
+						<button class="gallery-left" onclick="buttonSlider(this, -1)">&#10094;</button>
+						<button class="gallery-right" onclick="buttonSlider(this, 1)">&#10095;</button>
+					</div>
+					<h3>Academic conference website</h3>
+					<span class="tag">HTML5</span>
+					<span class="tag">CSS3</span>
+					<span class="tag">Bootstrap</span>
+					<span class="tag">PHP</span>
+					<span class="tag">MySQL</span><br>
+					<a href="https://github.com/Reienn/acedemic-conference" target="_blank">See on GitHub</a>
+					<a href="http://xccc.000webhostapp.com/" target="_blank">See demonstration</a>
+				</div>
+			</div>
+		</section>
+		<footer id="contact" class="nav-anchor">
+			<h2>Contact me</h2>
+			<script>let submitted = false;</script>
+			<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSf4mHod-sjGApVe97n0uEVKxmMW2qdskuJhWDlEWxKMRE9WEw/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+				<input type="email" name="entry.2052967433" id="entry.2052967433" placeholder="Your e-mail" class="text-input" required><br>
+				<input type="text" name="entry.2063293427" id="entry.2063293427" placeholder="Subject" class="text-input" required><br>
+				<textarea name="entry.1763544238" id="entry.1763544238" placeholder="Message" rows="7" class="text-input" required></textarea><br>
+				<input type="submit" value="send" id="contact-button">
+			</form>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+			<p id="msg"></p>
+			<a href="https://www.facebook.com/anna.m.jankowicz" target="_blank" class="social"><img class="icon" src="assets/FB-f-Logo__white_57.png" alt="facebook"></a>
+			<div id="up-link" class="display-none"><a onclick="navScroll('header', document.getElementById('header-link'))">&#94;</a></div>
+			<div id="copyrights">&copy;2018 ANNA JANKOWICZ</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>
