@@ -1,6 +1,7 @@
 const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
+const imageMin = require('gulp-imagemin');
 const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 
 gulp.task('copyHtml', function(){
@@ -8,14 +9,15 @@ gulp.task('copyHtml', function(){
         .pipe(gulp.dest(''));
 });
 
-gulp.task('imagemin', function(){
+gulp.task('imageMin', function(){
     gulp.src('src/assets/*')
-        .pipe(imagemin())
+        .pipe(imageMin())
         .pipe(gulp.dest('assets'));
 });
 
 gulp.task('minify', function(){
     gulp.src('src/js/*.js')
+        .pipe(concat('script.js'))
         .pipe(uglify())
         .pipe(gulp.dest('js'));
 });
@@ -26,4 +28,11 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', ['copyHtml', 'imagemin', 'minify', 'sass']);
+gulp.task('default', ['copyHtml', 'imageMin', 'minify', 'sass']);
+
+gulp.task('watch', function(){
+    gulp.watch('src/*.html', ['copyHtml']);
+    gulp.watch('src/assets/*', ['imageMin']);
+    gulp.watch('src/js/*.js', ['minify']);
+    gulp.watch(['src/sass/*.scss', 'src/sass/modules/*.scss', 'src/sass/partials/*.scss'], ['sass']);
+});
