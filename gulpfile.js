@@ -5,25 +5,25 @@ const sass = require('gulp-sass');
 
 gulp.task('copyHtml', function(){
     gulp.src('src/*.html')
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest(''));
 });
 
 gulp.task('imagemin', function(){
     gulp.src('src/assets/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/assets'));
+        .pipe(gulp.dest('assets'));
 });
 
 gulp.task('minify', function(){
     gulp.src('src/js/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('js'));
 });
 
 gulp.task('sass', function(){
     gulp.src('src/sass/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('css'));
 });
 
 gulp.task('default', ['copyHtml', 'imagemin', 'minify', 'sass']);
