@@ -1,0 +1,42 @@
+$translate: 100px;
+
+.animable{
+    opacity: 0;
+}
+
+.onscroll-animation{
+    animation-name: move;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes move {
+    from {
+        -ms-transform: translateY($translate);
+        -webkit-transform: translateY($translate);
+        transform: translateY($translate);
+        opacity: 0;
+    }
+    to {
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    from {
+        -ms-transform: translateY($translate);
+        -webkit-transform: translateY($translate);
+        transform: translateY($translate);
+        opacity: 0;
+    }
+    to {
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

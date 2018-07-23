@@ -39,8 +39,15 @@ window.onscroll = function() {
 				if(viewTop > 0.8*prevSection){
 					[].forEach.call(document.getElementsByClassName('nav-link'), navLink => {
 						navLink.classList.remove('active');
-					});		
+					});
 					document.getElementById(section.id+'-link').classList.add('active');
+					//Activating elements' animations in active section
+					let animationDelay = 0;
+					[].forEach.call(section.getElementsByClassName('animable'), animable => {
+						animable.classList.add('onscroll-animation');
+						animable.style.animationDelay = animationDelay+'s';
+						animationDelay += 0.5;
+					});
 				}
 			}
 
