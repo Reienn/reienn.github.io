@@ -1,14 +1,22 @@
 footer{
     background-color: $dark-bg-color;
     position: relative;
-
     .social{
-        display: block;
         margin: 50px 0;
-    }
-    
-    .icon:hover, .icon:active{
-        transform: scale(1.1, 1.1);
+        display: block;
+        a{
+            display: inline-block;
+            &:hover, &:active{
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -o-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+            .icon{
+                height: 57px;
+                margin: 0 5px;           
+            }
+        }
     }
     
     #up-link{
@@ -17,7 +25,6 @@ footer{
         bottom: 0;
         z-index: 200;
         width: 60px;
-
         a{
             font-size: 300%;
             font-weight: bold;
