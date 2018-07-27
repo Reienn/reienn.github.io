@@ -6,33 +6,25 @@ nav{
 	position: fixed;
 	z-index: 100;
 	background-color: $nav-bg-color;
-
 	@media screen and (max-width: 500px){
 		height: auto;
-
 		.hide-menu{
 			display: none;
 		}
 	}
-
 	a{
 		@extend %primary-a;
-
 	}
-
 	.active{
 		color: $nav-active-font-color;
 		border-bottom: 2px solid $nav-active-border-color;
 	}
-
 	ul{
 		margin: 0 20px;
-
 		li{
 			display: inline;
 		}
 	}
-
 	@media screen and (max-width: 500px){
 		ul li, li a{
 			display: block;

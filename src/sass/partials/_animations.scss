@@ -3,13 +3,11 @@ $translate: 100px;
 .animable{
     opacity: 0;
 }
-
 .onscroll-animation{
     animation-name: move;
     animation-duration: 1.25s;
     animation-fill-mode: forwards;
 }
-
 
 @-webkit-keyframes move {
     from {
@@ -25,7 +23,6 @@ $translate: 100px;
         opacity: 1;
     }
 }
-
 @keyframes move {
     from {
         -ms-transform: translateY($translate);

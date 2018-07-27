@@ -3,7 +3,6 @@
 	flex-flow: row wrap;
 	align-items: stretch;
     justify-content: center;
-    
     .project{
         margin: 2vh;
         padding: 0 0 3vh;
@@ -14,13 +13,11 @@
         background: rgba(255, 255, 255, 0.938);
         box-shadow: 0px 0px 1px 1px $shadow-color;
         position: relative;
-
         .gallery{
             width: 30vw;
             min-width: 200px;
             position: relative;
         }
-
         img{
             width: 30vw;
             min-width: 200px;
@@ -30,7 +27,6 @@
             transition: opacity 1s;
             box-shadow: 0px 4px 2px -2px $shadow-color;
         }
-
         .tag{
             display: inline-block;
             padding: 4px 6px;
@@ -38,7 +34,6 @@
             background-color: $tag-bg-color;
             border-radius: 3px;
         }
-
         a{
             @extend %primary-a;
         }
