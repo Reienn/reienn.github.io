@@ -180,7 +180,7 @@ nav {
   float: float; }
 
 header {
-  color: white; }
+  color: #f6faf5; }
   header svg {
     position: fixed;
     z-index: -100;

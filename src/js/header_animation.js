@@ -8,9 +8,3 @@ let animationDelay = 500;
     }, animationDelay);
     animationDelay += 100;
 });
-
-setTimeout(()=>{
-    //Activate header's elements' animations
-    document.getElementById('title').classList.add('onscroll-animation');
-    document.getElementById('subtitle').classList.add('onscroll-animation');
-}, animationDelay);
