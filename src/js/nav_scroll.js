@@ -9,7 +9,7 @@ function toggleNav(){
 let userScroll = false;
 function navScroll(anchor, navItem){
 	userScroll = true;
-	document.getElementById(anchor).scrollIntoView({ 
+	document.getElementById(anchor).scrollIntoView({
 		behavior: 'smooth',
 		block: 'start'
 	});
@@ -23,13 +23,13 @@ function navScroll(anchor, navItem){
 	setTimeout(()=>{userScroll = false;}, 1000);
 }
 
-//Activating navigation link after user scrolls 
+//Activating navigation link after user scrolls
 window.onscroll = function() {
 	//Hiding menu in mobile view when scrolled
 	document.getElementById('nav-toggle').classList.add('hide-menu');
-	
+
 	if(!userScroll){ //Blocking nav-bar scroll update when navigating from menu
-		setTimeout(() => { 
+		setTimeout(() => {
 			let sections =  document.getElementsByClassName('nav-anchor');
 			let viewTop = window.scrollY + document.getElementById('nav-bar').offsetHeight;
 			for(let i=0; i < sections.length; i++) {

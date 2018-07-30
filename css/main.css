@@ -208,23 +208,33 @@ header {
     justify-content: center;
     margin: 0 auto;
     width: 70vw;
-    max-width: 800px; }
+    padding: 0 3vw; }
     #about #skills .skill {
-      height: 100px;
-      width: 100px;
+      width: 12vw;
+      max-width: 200px;
+      min-width: 100px;
+      height: 12vw;
+      max-height: 200px;
+      min-height: 100px;
       margin: 2vh 1vw;
-      background: #9cc862;
-      color: white;
-      text-align: center;
-      line-height: 100px;
-      vertical-align: middle;
-      font-weight: bold; }
+      background: #f6faf5; }
       #about #skills .skill:nth-child(even) {
         border-top-left-radius: 50%;
         border-bottom-right-radius: 50%; }
       #about #skills .skill:nth-child(odd) {
         border-top-right-radius: 50%;
         border-bottom-left-radius: 50%; }
+      #about #skills .skill img {
+        width: 10vw;
+        max-width: 190px;
+        min-width: 90px;
+        height: 10vw;
+        max-height: 190px;
+        min-height: 90px;
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
 
 #list {
   display: flex;
