@@ -234,7 +234,7 @@ header {
       height: 12vw;
       max-height: 200px;
       min-height: 100px;
-      margin: 2vh 1vw;
+      margin: 1.25%;
       background: #f6faf5; }
       #about #skills .skill:nth-child(even) {
         border-top-left-radius: 50%;
@@ -242,6 +242,10 @@ header {
       #about #skills .skill:nth-child(odd) {
         border-top-right-radius: 50%;
         border-bottom-left-radius: 50%; }
+      #about #skills .skill:hover {
+        transform: scale(1.1); }
+        #about #skills .skill:hover img {
+          filter: none; }
       #about #skills .skill img {
         width: 10vw;
         max-width: 190px;
@@ -252,7 +256,8 @@ header {
         margin: 0 auto;
         position: relative;
         top: 50%;
-        transform: translateY(-50%); }
+        transform: translateY(-50%);
+        filter: opacity(60%); }
 
 #list {
   display: flex;
