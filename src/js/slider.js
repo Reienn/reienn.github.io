@@ -27,9 +27,9 @@ function buttonSlider(childButton, change){
 }
 
 //Auto slider
-window.setInterval(()=>{
-	let galleries = document.getElementsByClassName('gallery');
-	for(let i=0; i < galleries.length; i++){
-		slider(galleries[i], 1);
-	}
-}, 5000);
+// window.setInterval(()=>{
+// 	let galleries = document.getElementsByClassName('gallery');
+// 	for(let i=0; i < galleries.length; i++){
+// 		slider(galleries[i], 1);
+// 	}
+// }, 5000);

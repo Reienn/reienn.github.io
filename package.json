@@ -4,6 +4,7 @@
   "description": "web developer's portfolio",
   "main": "index.js",
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "gulp-uglify-es": "^1.0.4"
   },
   "dependencies": {
-    "hoek": "^5.0.3"
+    "hoek": "^5.0.3",
+    "natives": "^1.1.6"
   }
 }
