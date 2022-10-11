@@ -41,6 +41,9 @@
             min-height: 100px;
             margin: 1.25%;
             background: $light-bg-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &:nth-child(even) {
                 border-top-left-radius: 50%;
                 border-bottom-right-radius: 50%;
@@ -56,17 +59,9 @@
                 }
             }
             img{
-                width: 10vw;
-                max-width: 190px;
-                min-width: 90px;
-                height: 10vw;
-                max-height: 190px;
-                min-height:  90px;
-                margin: 0 auto;
                 position: relative;
-                top: 50%;
-                transform: translateY(-50%);
                 filter: opacity(60%);
+                width: 90%;
             }
         }
     }
